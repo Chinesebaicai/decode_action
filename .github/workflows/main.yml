@@ -1,0 +1,12 @@
+name: 演示工作流
+# 关键：workflow_dispatch 开启【手动点击运行】按钮
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 初始化完成提示
+        run: echo "✅ Action初始化成功，以后可以手动点击运行！"
