@@ -1,4 +1,4 @@
-//Thu Oct 29 2026 10:55:10 GMT+0000 (Coordinated Universal Time)
+//Thu Oct 29 2026 10:57:49 GMT+0000 (Coordinated Universal Time)
 //Base:<url id="cv1cref6o68qmpt26ol0" type="url" status="parsed" title="GitHub - echo094/decode-js: JS混淆代码的AST分析工具 AST analysis tool for obfuscated JS code" wc="2165">https://github.com/echo094/decode-js</url>
 //Modify:<url id="cv1cref6o68qmpt26olg" type="url" status="parsed" title="GitHub - smallfawn/decode_action: 世界上本来不存在加密，加密的人多了，也便成就了解密" wc="741">https://github.com/smallfawn/decode_action</url>
 (function ﹲﱢ(ﱢﹰ, ﹸﹸ, ﹴﱡ, ﱠﹺ, ﱠﹸ, ﱡﱠ, ﹰﹺ, ﱣﱞ, ﱞﱣ, ﹲ‌, ﹴﹲ, ﱢﹸ, ﱢﱡ, ﹺﹲ, ﱠﹴ, ﱠﱟ, ﱣﹼ, ءﹺ) {
@@ -392,30 +392,36 @@
                   var ﹼ‌ = arguments.length > ﹺﹶ().length ? ﹺﹶ().length : arguments.length,
                     ﹺء = [];
                   for (var ﹶﹲ = 0; ﹶﹲ < ﹼ‌; ﹶﹲ++) ﹺء[ﹺﹶ()[ﹶﹲ]] = arguments[ﹶﹲ];
-                  ﱠﱠ() && function (ﱡ‌, ﹲﹺ, ﹰﱣ) {
-                    try {
-                      for (ﹲﹺ = ﹼ‌ - 1, ﹰﱣ = []; ﹲﹺ >= 0; ﹲﹺ--) (function (ﹲﹺ, ءﱠ) {
-                        ءﱠ in ﹰﱣ || (ﹴﹲ(ﱡ‌, ﹲﹺ, {
-                          get: function () {
-                            return ﹺء[ءﱠ];
-                          },
-                          set: function (ﱡ‌) {
-                            ﹺء[ءﱠ] = ﱡ‌;
-                          },
-                          configurable: true
-                        }), ﹰﱣ[ءﱠ] = 1);
-                      })(ﹲﹺ, ﹺﹶ()[ﹲﹺ]);
-                    } catch (ﱞﹰ) {}
-                  }(ﹺء[ﹴﹺ()] = arguments);
-                  ﹶﱢ() && (ﹺء[ﱠ()] = this);
-                  ﹸﹰ() && function () {
-                    try {
-                      ﹴﹲ(ﹺء, ﱡﱟ(), {
-                        value: ﹲﹼ,
-                        writable: false
-                      });
-                    } catch (ﱞﹰ) {}
-                  }();
+                  if (ﱠﱠ()) {
+                    (function (ﱡ‌, ﹲﹺ, ﹰﱣ) {
+                      try {
+                        for (ﹲﹺ = ﹼ‌ - 1, ﹰﱣ = []; ﹲﹺ >= 0; ﹲﹺ--) (function (ﹲﹺ, ءﱠ) {
+                          ءﱠ in ﹰﱣ || (ﹴﹲ(ﱡ‌, ﹲﹺ, {
+                            get: function () {
+                              return ﹺء[ءﱠ];
+                            },
+                            set: function (ﱡ‌) {
+                              ﹺء[ءﱠ] = ﱡ‌;
+                            },
+                            configurable: true
+                          }), ﹰﱣ[ءﱠ] = 1);
+                        })(ﹲﹺ, ﹺﹶ()[ﹲﹺ]);
+                      } catch (ﱞﹰ) {}
+                    })(ﹺء[ﹴﹺ()] = arguments);
+                  }
+                  if (ﹶﱢ()) {
+                    ﹺء[ﱠ()] = this;
+                  }
+                  if (ﹸﹰ()) {
+                    (function () {
+                      try {
+                        ﹴﹲ(ﹺء, ﱡﱟ(), {
+                          value: ﹲﹼ,
+                          writable: false
+                        });
+                      } catch (ﱞﹰ) {}
+                    })();
+                  }
                   return ﹴﹰ(ﹴﹼ(), ﹺء, [], ء‍);
                 };
                 (function () {
@@ -498,7 +504,9 @@
                     };
                     ﱣ = ﹴﹰ(ﱟﱣ, ﹰﱟ, [], ﱡﱢ, ﹼﹴ);
                     if (ﹼﹴ.ﹶﱞ) {
-                      ﹰﹸ && (ﹰﹸ.ﹶﱞ = 1);
+                      if (ﹰﹸ) {
+                        ﹰﹸ.ﹶﱞ = 1;
+                      }
                       return ﱣ;
                     }
                     if (ﹼﹴ.ﱣﹲ !== undefined) {
@@ -596,8 +604,12 @@
         ﱟﹶ = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".indexOf(ﹲﱢ.charAt(ﹲ‌++));
         ﹺ = ﹴﹲ << 18 | ﱣﹼ << 12 | (ءﹺ & 63) << 6 | ﱟﹶ & 63;
         ﱞﱣ.push(ﹺ >> 16 & 255);
-        ءﹺ !== 64 && ﱞﱣ.push(ﹺ >> 8 & 255);
-        ﱟﹶ !== 64 && ﱞﱣ.push(ﹺ & 255);
+        if (ءﹺ !== 64) {
+          ﱞﱣ.push(ﹺ >> 8 & 255);
+        }
+        if (ﱟﹶ !== 64) {
+          ﱞﱣ.push(ﹺ & 255);
+        }
       }
       return ﱞﱣ;
     };
